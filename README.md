@@ -1,5 +1,7 @@
 # NHP_OAM
 The implement of paper:"To Search or to Recommend: Predicting Open-App Motivation with the Deep Hawkes Process"
+<img width="915" alt="image" src="https://github.com/Jeryi-Sun/NHP_OAM/assets/51322811/23a1d5e2-34df-4307-bfc6-09356a766c3f">
+<img width="894" alt="image" src="https://github.com/Jeryi-Sun/NHP_OAM/assets/51322811/b37d014d-4036-4ae1-8611-1d34d12a8656">
 
 # Dataset
 
