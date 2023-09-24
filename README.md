@@ -11,8 +11,8 @@ ZhihuRec [url](https://drive.google.com/file/d/1GIRgLYPfcMeIAjnQ7F9I-ZsQP3GfBcuS
 
 # Trainining and Evaluation
 ```python
-python NHP_OAM_OAMD/main_NHP_OAM.py
-python NHP_OAM_ZhihuRec/main_NHP_OAM.py
+python ./NHP_OAM_OAMD/main_NHP_OAM.py
+python ./NHP_OAM_ZhihuRec/main_NHP_OAM.py
 ```
 The parameters used in the above code are shown in their own files as default parameters.
 
