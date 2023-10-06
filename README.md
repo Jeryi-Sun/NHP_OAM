@@ -10,7 +10,7 @@ Incorporating Search and Recommendation (S&R) services within a singular applica
 
 Unzip the below datasets and put them in the corresponding folder.
 
-The OAMD can be downloaded from [OAMD](https://drive.google.com/file/d/1BdHl_vTVReMTJCNHcsIXQF5lTemEDmml/view?usp=drive_link).
+The OAMD can be downloaded from [OAMD](https://drive.google.com/file/d/1de956E9UCrvamz3hyQpaOqWkvdUpMLu3/view?usp=drive_link).
 
 The extended ZhihuRec can be downloaded from  [ZhihuRec](https://drive.google.com/file/d/1GIRgLYPfcMeIAjnQ7F9I-ZsQP3GfBcuS/view?usp=drive_link).
 
