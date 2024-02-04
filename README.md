@@ -3,6 +3,9 @@ The implementation of the paper: "To Search or to Recommend: Predicting Open-App
 
 Incorporating Search and Recommendation (S&R) services within a singular application is prevalent in online platforms, leading to a new task termed open-app motivation prediction, which aims to predict whether users initiate the application with the specific intent of information searching, or to explore recommended content for entertainment. Studies have shown that predicting users' motivation to open an app can help to improve user engagement and enhance performance in various downstream tasks. However, accurately predicting open-app motivation is not trivial, as it is influenced by user-specific factors, search queries, clicked items, as well as their temporal occurrences. Furthermore, these activities occur sequentially and exhibit intricate temporal dependencies. Inspired by the success of the Neural Hawkes Process (NHP) in modeling temporal dependencies in sequences, this paper proposes a novel neural Hawkes process model to capture the temporal dependencies between historical user browsing and querying actions. The model, referred to as Neural Hawkes Process-based Open-App Motivation prediction model (NHP-OAM), employs a hierarchical transformer and a novel intensity function to encode multiple factors, and open-app motivation prediction layer to integrate time and user-specific information for predicting users' open-app motivations. To demonstrate the superiority of our NHP-OAM model and construct a benchmark for the Open-App Motivation Prediction task, we not only extend the public S\&R dataset ZhihuRec but also construct a new real-world Open-App Motivation Dataset (OAMD). Experiments on these two datasets validate NHP-OAM's superiority over baseline models. Further downstream application experiments demonstrate NHP-OAM's effectiveness in predicting users' Open-App Motivation, highlighting the immense application value of NHP-OAM.
 
+![Examples of Open-App Motivation.](figs/open_motivation_example.png "Examples of Open-App Motivation.")
+
+
 ![The overall architecture of the proposed model NHP-OAM.](figs/model_graph.png "The overall architecture of the proposed model NHP-OAM.")
 
 # Dataset
@@ -19,6 +22,14 @@ python ./NHP_OAM_OAMD/main_NHP_OAM.py
 python ./NHP_OAM_ZhihuRec/main_NHP_OAM.py
 ```
 The parameters used in the above code are shown in their own files as default parameters.
+
+## Impact of 𝛼 
+![Performance Analysis by 𝛼 Values on OAMD.](figs/Alpha_F.png "Performance Analysis by 𝛼 Values on OAMD.")
+Since the loss function is composed of two parts with different magnitudes of loss, we use 𝛼 to control the impact of the two parts of loss on parameter learning. To investigate the impacts of the hyper-parameter, we conducted experiments with varying 𝛼. From the results in the above figure, we found that the performance peaks when 𝛼 is 1×10^{-3}. With a further increase in hyperparameters, the performances become worse. We attribute this to the fact that the log-likelihood loss has larger values compared to the cross-entropy loss. Using 𝛼 of 1×10^{-3} allows us to control the optimization ratio of both. However, it also can't be too small, otherwise, it will result in a decline in optimization effectiveness.
+
+
+
+
 
 
 # Check training and evaluation process
