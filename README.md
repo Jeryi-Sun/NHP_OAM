@@ -25,6 +25,7 @@ The parameters used in the above code are shown in their own files as default pa
 
 ## Impact of 𝛼 
 ![Performance Analysis by 𝛼 Values on OAMD.](figs/Alpha_F.png "Performance Analysis by 𝛼 Values on OAMD.")
+
 Since the loss function is composed of two parts with different magnitudes of loss, we use 𝛼 to control the impact of the two parts of loss on parameter learning. To investigate the impacts of the hyper-parameter, we conducted experiments with varying 𝛼. From the results in the above figure, we found that the performance peaks when 𝛼 is 1×10^{-3}. With a further increase in hyperparameters, the performances become worse. We attribute this to the fact that the log-likelihood loss has larger values compared to the cross-entropy loss. Using 𝛼 of 1×10^{-3} allows us to control the optimization ratio of both. However, it also can't be too small, otherwise, it will result in a decline in optimization effectiveness.
 
 
